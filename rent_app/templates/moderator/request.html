@@ -1,0 +1,38 @@
+{% extends 'root.html' %}
+{% block Title %}Заявки{% endblock %}
+{% block content %}
+    <div class="requests">
+        {% for request in requests %}
+            <div class="request">
+                <h3 class="request-title">Заявка №{{ request.id }} от {{ request.user }}</h3>
+                <p class="request-status">Статус:
+                    <i style="
+                    {% if request.status == '0' %}color: #800909;{% elif request.status == '2' %}color: #168303;{% else %}color: #736404;{% endif %}
+">{{ request.get_status_display }}</i>
+                </p>
+                <p class="request-property">{{ request.property }}</p>
+                {% if request.status != '0' %}
+                    <a href="#" class="btn-modal request_id_{{ request.id }}">Ответить</a>
+                {% elif request.status == "2" %}
+                    <p class="btn-block">Решение принято</p>
+                {% elif request.status == "0" %}
+                    <p class="btn-block">Решение принято</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div id="modal_window">
+        <div class="modal-content">
+            <h3>Заявка от <span class="request-user" style="opacity: 80%"></span></h3>
+            <p class="request-phone_number"><span></span></p>
+            <p class="request-email"><span>Эл. почта: </span></p>
+            <p class="request-fullname"><span>Ф.И.О.: </span></p>
+            <span></span>
+            <div class="request-choose">
+                <a href="{% url 'rent_app:request_denied' pk=0 %}" methods="post" class="btn-request-denied">Отказать</a>
+                <a href="{% url 'rent_app:request_accept' pk=0 %}" class="btn-request-accept">Согласиться</a>
+            </div>
+        </div>
+        <div class="btn-close"><p>X</p></div>
+    </div>
+{% endblock %}

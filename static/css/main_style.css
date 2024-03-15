@@ -1,0 +1,594 @@
+*
+{
+    padding: 0;
+    margin: 0;
+
+    font-family: "Nunito Sans", sans-serif;
+}
+* a
+{
+    text-decoration: none;
+    color: black;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: #eeeeee;
+
+    padding: 0 35px;
+}
+header .Title
+{
+    font-weight: 900;
+    font-size: 24px;
+}
+header .navigation
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 50%;
+
+    padding: 0 15px;
+}
+.content
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 360px 360px 360px;
+
+    row-gap: 50px;
+    column-gap: 50px;
+
+    width: 100%;
+
+    padding: 55px;
+}
+.content .rent-block
+{
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    padding: 10px;
+
+    border: 1px solid rgba(176, 183, 255, 0.15);
+    border-radius: 0 15px 0 15px;
+
+    filter: drop-shadow(0 0 5px rgba(159, 159, 159, 0.42));
+}
+.content .rent-block .rent-img
+{
+    width: 100%;
+    height: 75%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 102%;
+
+    border-radius: 0 15px 0 15px;
+}
+.content .rent-block .rent-info
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: start;
+    flex-direction: column;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 10px 0 0 0;
+}
+.content .rent-block .rent-info .rent-price
+{
+    font-weight: 600;
+}
+.content .rent-block .rent-info .rent-btn
+{
+    background-color: #459cff;
+    border-radius: 0 5px 0 5px;
+
+    padding: 3px 15px;
+
+    box-shadow: 0 0 10px rgba(60, 137, 224, 0.68) inset;
+    filter: drop-shadow(0 0 2px rgba(44, 119, 203, 0.51));
+
+    color: white;
+    text-align: center;
+}
+.detail-content
+{
+    display: grid;
+    grid-template-rows: 555px;
+    grid-template-columns: 60% 40%;
+    column-gap: 25px;
+
+    width: 100%;
+    padding: 30px;
+}
+.detail-content .rent-d-img
+{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0 30px 0 30px;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    filter: drop-shadow(0 0 5px rgba(115, 114, 114, 0.7));
+}
+.detail-content .rent-d-info
+{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    height: 100%;
+}
+.detail-content .rent-d-info .rent-d-price
+{
+    font-size: 24px;
+}
+.detail-content .rent-d-info .rent-d-price span
+{
+    font-size: 36px;
+    font-weight: 700;
+}
+.detail-content .rent-d-info .rent-d-address
+{
+    font-size: 18px;
+    opacity: 60%;
+}
+.detail-content .rent-d-info .rent-d-shr-desc
+{
+    font-size: 14px;
+    font-weight: 900;
+}
+.detail-content .rent-d-info .rent-d-renter
+{
+    opacity: 80%;
+    font-size: 18px;
+    font-weight: 800;
+}
+.detail-content .rent-d-info a
+{
+    background-color: #459cff;
+
+    padding: 10px 20px;
+    border-radius: 15px 0;
+
+    margin-top: 25px;
+
+    box-shadow: 0 0 10px rgba(60, 137, 224, 0.68) inset;
+    filter: drop-shadow(0 0 2px rgba(44, 119, 203, 0.51));
+
+    color: white;
+}
+.rent-form
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 555px;
+
+    width: 100%;
+
+    padding: 2.2%;
+}
+.rent-form .rent-request-d-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 100%;
+}
+.rent-form .rent-request-d-form p
+{
+    width: 100%;
+}
+.rent-form .rent-request-d-form p input
+{
+    width: 100%;
+    height: 30px;
+
+    border-radius: 0 5px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+
+    padding: 0 10px;
+}
+.rent-form .rent-sign-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 100%;
+}
+.rent-form .rent-sign-form p
+{
+    width: 100%;
+    margin: 10px 0;
+}
+.rent-form .rent-sign-form p input
+{
+    width: 100%;
+    height: 30px;
+
+    border-radius: 0 10px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+
+    padding: 0 10px;
+}
+.rent-form .rent-sign-form input[value='Зарегистрироваться']
+{
+    background-color: #459cff;
+
+    padding: 8px 20px;
+    border: none;
+    border-radius: 0 15px;
+    margin: 15px 0;
+
+    color: white;
+    font-size: 16px;
+}
+.rent-form .rent-sign-form input[value='Войти']
+{
+    background-color: #459cff;
+
+    padding: 8px 20px;
+    border: none;
+    border-radius: 0 15px;
+    margin: 15px 0;
+
+    color: white;
+    font-size: 16px;
+}
+.second_header
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    height: 35px;
+
+    background: rgba(196, 196, 196, 0.64);
+}
+.second_header .auth_nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 13%;
+    padding: 0 40px;
+}
+.second_header .auth_nav a
+{
+    color: #000000;
+}
+.rent-form
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 555px;
+
+    width: 100%;
+
+    padding: 2.2%;
+}
+.rent-form .rent-property-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 100%;
+}
+.rent-form .rent-property-form p
+{
+    width: 100%;
+}
+.rent-form .rent-property-form p input
+{
+    width: 100%;
+    height: 30px;
+
+    border-radius: 0 5px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+
+    padding: 0 10px;
+}
+.rent-form .rent-property-form p #id_image
+{
+    width: 100%;
+    height: 30px;
+
+    border: none;
+
+    padding: 0 10px;
+}
+.rent-form .rent-property-form p textarea
+{
+    width: 100%;
+    height: 30px;
+
+    border-radius: 0 5px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+
+    padding: 0 10px;
+}
+.rent-form .rent-property-form input[value='Принять']
+{
+    background-color: #459cff;
+
+    padding: 8px 20px;
+    border: none;
+    border-radius: 0 15px;
+    margin: 15px 0;
+
+    color: white;
+    font-size: 16px;
+}
+.requests
+{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: 300px;
+    row-gap: 25px;
+    column-gap: 30px;
+
+    width: 100%;
+
+    margin: 50px 100px;
+}
+.requests .request
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 60% 20%;
+
+    background-color: white;
+
+    padding: 3% 5%;
+    border-radius: 15px;
+
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    transition: 160ms ease-out;
+}
+.requests .request:hover
+{
+    transform: translate(0, -5px);
+    filter: drop-shadow(0 5px 7px rgba(0, 0, 0, 0.2));
+}
+.requests .request .request-title
+{
+    width: 100%;
+    text-align: center;
+}
+.requests .request a
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 20px;
+
+    background-color: rgba(45, 169, 45, 0.82);
+
+    border-radius: 0 15px 15px 15px;
+    color: white;
+}
+.requests .request .btn-block
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 20px;
+
+    background-color: rgba(105, 105, 105, 0.82);
+
+    border-radius: 0 15px 15px 15px;
+    color: white;
+}
+#modal_window
+{
+    display: none;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(5px);
+
+    transition: 500ms;
+}
+#modal_window .btn-close
+{
+    position: relative;
+    top: -225px;
+    left: -30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+#modal_window .btn-close p
+{
+    transform: scaleX(1.24) rotate(-13deg);
+    opacity: 80%;
+}
+#modal_window .modal-content
+{
+    display: grid;
+    grid-template-rows: 6.5% 8% 8% 8% 1fr 15%;
+
+    width: 35.5%;
+    height: 58%;
+
+    background-color: #f8f8f8;
+    padding: 2% 3% 1% 3%;
+    border-radius: 0 30px;
+}
+#modal_window .modal-content h3
+{
+    width: 100%;
+}
+#modal_window .modal-content .request-choose
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#modal_window .modal-content .request-choose a
+{
+    padding: 2.5% 4%;
+
+    margin: 0 1%;
+    color: white;
+}
+#modal_window .modal-content .request-choose a:nth-child(1)
+{
+    background-color: rgba(206, 25, 25, 0.91);
+    border-radius: 0 0 0 20px;
+    transition: 80ms;
+}
+#modal_window .modal-content .request-choose a:nth-child(1):hover
+{
+    background-color: rgba(225, 31, 31, 0.91);
+    border-radius: 0 0 0 20px;
+}
+#modal_window .modal-content .request-choose a:nth-child(2)
+{
+    background-color: rgba(45, 169, 45, 0.82);
+    border-radius: 0 20px 0 0;
+}
+#modal_window .modal-content .request-choose a:nth-child(2):hover
+{
+    background-color: rgba(58, 187, 58, 0.82);
+    border-radius: 0 20px 0 0;
+}
+.navigation-panel
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+}
+.navigation-panel form
+{
+    width: 50%;
+}
+.navigation-panel .search-label
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /*border: 1px solid black;*/
+    padding: 1% 6% 1.5% 1.5%;
+}
+.navigation-panel .search-label input[type='search']
+{
+    padding: 6px 13px;
+    border: 1px solid rgba(0, 0, 0, 0.51);
+    border-radius: 15px 0 0 15px;
+    margin: 0 0 0 0;
+
+    font-size: 14px;
+}
+.navigation-panel .search-label input[type='search']:focus
+{
+    outline: none;
+}
+.navigation-panel .search-label input[type='submit']
+{
+    background-color: rgba(0, 0, 0, 0.56);
+    outline: none;
+    padding: 7.4px 15px 7.4px 13px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    color: white;
+
+    cursor: pointer;
+}
+.renters-content
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 90px);
+
+    column-gap: 20px;
+    row-gap: 25px;
+
+    width: 100%;
+    padding: 2%;
+
+}
+.renters-content .renter-block
+{
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "img title"
+        "img director";
+    ;
+    padding: 5px;
+
+    background-color: #eeeeee;
+}
+.renters-content .renter-block .renter-img
+{
+    grid-area: img;
+
+    width: 80px;
+    height: 80px;
+
+    background-position: center;
+    background-size: 150%;
+}

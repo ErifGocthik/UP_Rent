@@ -1,0 +1,19 @@
+{% extends 'root.html' %}
+{% block title %}
+    Подробнее
+{% endblock %}
+{% block content %}
+    <div class="detail-content">
+        <div class="rent-d-img" style="background-image: url('{{ property.image.url }}')"></div>
+        <div class="rent-d-info">
+            <p class="rent-d-price">Цена: <span>{{ property.price }} ₽</span></p>
+            <p class="rent-d-address">{{ property.address }}</p>
+            <p class="rent-d-shr-desc">{{ property.short_description }}</p>
+            <p class="rent-d-renter">{{ property.renter }}</p>
+            <div class="rent-d-renter-logo"></div>
+            <p class="phone_number">Номер телефона: {{ property.phone_number }}</p>
+            <p class="rent-d-space">Площадь: {{ property.space }} км²</p>
+            <a href="{% url 'main:request_form' pk=property.id %}">Перейти к аренде</a>
+        </div>
+    </div>
+{% endblock %}

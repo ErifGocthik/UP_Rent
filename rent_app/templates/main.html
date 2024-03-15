@@ -1,0 +1,27 @@
+{% extends 'root.html' %}
+{% block title %}
+    RestRent
+{% endblock %}
+{% block content %}
+    <div class="navigation-panel">
+        <form action="." method="post">
+            {% csrf_token %}
+            <label class="search-label">
+                <input type="search" name='search-field' placeholder="Поиск">
+                <input type="submit" value="Поиск">
+            </label>
+        </form>
+    </div>
+    <div class="content">
+        {% for rent in property %}
+            <div class="rent-block">
+                <div class="rent-img" style="background-image: url('{{ rent.image.url }}')"></div>
+                <div class="rent-info">
+                    <p class="rent-price">Цена: {{ rent.price }} ₽</p>
+                    <p class="rent-address">{{ rent.address }}</p>
+                    <a href="{% url 'main:property_detail' pk=rent.id %}" class="rent-btn">Арендовать</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

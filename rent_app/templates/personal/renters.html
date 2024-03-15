@@ -1,0 +1,13 @@
+{% extends 'root.html' %}
+{% block Title %}Арендодатели{% endblock %}
+{% block content %}
+    <div class="renters-content">
+        {% for renter in renters %}
+            <div class="renter-block">
+                <div class="renter-img" style="background-image: url('{{ renter.logo.url }}')"></div>
+                <h3>{{ renter.title }}</h3>
+                <p>Директор: {{ renter.director }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

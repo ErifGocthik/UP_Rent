@@ -1,0 +1,13 @@
+{% extends 'root.html' %}
+{% block title %}
+    Аренда
+{% endblock %}
+{% block content %}
+    <div class="rent-form">
+        <form action="." method="post" enctype="multipart/form-data" class="rent-request-d-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+    </div>
+{% endblock %}
